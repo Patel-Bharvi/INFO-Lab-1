@@ -19,6 +19,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     public ViewJPanel(UIDATA user) {
         this.user = user;
         initComponents();
+        this.displayUIDATA();
     }
 
     /**
