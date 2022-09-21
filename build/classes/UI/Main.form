@@ -53,9 +53,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
                       <Component id="Create" min="-2" pref="105" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
                       <Component id="ViewInfo" min="-2" pref="105" max="-2" attributes="0"/>
-                      <EmptySpace pref="146" max="32767" attributes="0"/>
+                      <EmptySpace pref="145" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -67,7 +67,7 @@
                           <Component id="Create" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
                           <Component id="ViewInfo" alignment="3" min="-2" pref="51" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

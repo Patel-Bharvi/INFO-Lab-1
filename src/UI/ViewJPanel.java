@@ -228,14 +228,6 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(AT))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(DOB)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(DOBT))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(DATE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(DT))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(LN)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(LNT))
@@ -246,7 +238,15 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(COUNTRY)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(COT, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(COT, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DATE)
+                            .addComponent(DOB))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DOBT)
+                            .addComponent(DT))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
@@ -438,7 +438,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         D2T.setText(user.getDegree2());
         D2ST.setText(user.getDeg2start());
         D2ET.setText(user.getDeg2end());
-        //PHOTO.setText(user.getPhoto().toString());
+        PHOTO.setText(user.getPhoto().toString());
     
     
     }
