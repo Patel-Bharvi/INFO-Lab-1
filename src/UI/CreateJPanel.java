@@ -15,6 +15,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 
@@ -557,7 +558,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         user.setDegree2(D2T.getText());
         user.setDeg2start(D2ST.getText());
         user.setDeg2end(D2ET.getText());
-        user.setBytes(Photo);
+        user.setPhoto(Photo);
         
         JOptionPane.showMessageDialog(this,"Information is Saved!");
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -567,9 +568,15 @@ public class CreateJPanel extends javax.swing.JPanel {
         JFileChooser chooser=new JFileChooser();
         chooser.showOpenDialog(null);
         File f=chooser.getSelectedFile();
-        jLabel2.setIcon(new ImageIcon(f.toString()));
+        try {
+            Photo = ImageIO.read(f);
+        } catch (IOException ex) {
+            Logger.getLogger(CreateJPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        jLabel2.setIcon(new ImageIcon(Photo));
         filename = f.getAbsolutePath();
         PH.setText(filename);
+        
         
         //try(
             //File image = new File(filename);    

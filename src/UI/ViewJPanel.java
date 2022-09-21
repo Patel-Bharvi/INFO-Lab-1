@@ -5,6 +5,8 @@
 package UI;
 
 import MODEL.UIDATA;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -73,7 +75,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         D2T = new javax.swing.JTextField();
         D2ST = new javax.swing.JTextField();
         D2ET = new javax.swing.JTextField();
-        UPLOAD = new javax.swing.JButton();
+        UploadLabel = new javax.swing.JLabel();
 
         EUD.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         EUD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -193,8 +195,6 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
-        UPLOAD.setText("Upload");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -286,10 +286,9 @@ public class ViewJPanel extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(MT, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
                         .addComponent(PHOTO)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(UPLOAD)))
+                        .addComponent(UploadLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(92, 92, 92))
         );
         layout.setVerticalGroup(
@@ -352,20 +351,24 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addComponent(D2ET, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addComponent(PHOTO))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(CITY)
+                                    .addComponent(CT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(COUNTRY)
+                                    .addComponent(COT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 17, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(CITY)
-                            .addComponent(CT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(COUNTRY)
-                            .addComponent(COT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(PHOTO)
-                            .addComponent(UPLOAD))))
-                .addGap(30, 30, 30))
+                        .addComponent(UploadLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -438,7 +441,9 @@ public class ViewJPanel extends javax.swing.JPanel {
         D2T.setText(user.getDegree2());
         D2ST.setText(user.getDeg2start());
         D2ET.setText(user.getDeg2end());
-        PHOTO.setText(user.getPhoto().toString());
+        Image image = user.getPhoto();
+        ImageIcon imic = new ImageIcon(image);
+        UploadLabel.setIcon(imic);
     
     
     }
@@ -485,6 +490,6 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel PHOTO;
     private javax.swing.JLabel TELNO;
     private javax.swing.JTextField TELT;
-    private javax.swing.JButton UPLOAD;
+    private javax.swing.JLabel UploadLabel;
     // End of variables declaration//GEN-END:variables
 }

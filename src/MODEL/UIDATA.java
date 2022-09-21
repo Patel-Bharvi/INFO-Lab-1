@@ -123,7 +123,7 @@ public class UIDATA {
         this.Deg2end = Deg2end;
     }
 
-    public void setPhoto(File Photo) {
+    public void setPhoto(Image Photo) {
         this.Photo = Photo;
     }
 
@@ -187,7 +187,7 @@ public class UIDATA {
         return Deg2end;
     }
 
-    public File getPhoto() {
+    public Image getPhoto() {
         return Photo;
     }
     private String Email;
@@ -204,7 +204,7 @@ public class UIDATA {
     private String Degree2;
     private String Deg2start;
     private String Deg2end;
-    private File Photo;
+    private Image Photo;
     
     public UIDATA() {
     }
@@ -236,10 +236,6 @@ public class UIDATA {
     //public void setAge(String text) {
       //  throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     //}
-
-    public void setBytes(Image Photo) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     
     
